@@ -55,13 +55,28 @@
 
 ## Ejemplos
 
-### Ejemplo 1
+### Usar camelCase en nombre de atributos.
 ##### BAD:
 ```javascript
-    // typescript code
+    @Column({ name: 'last_login', nullable: true })
+    last_login: Date;
 ```
 
 ##### GOOD:
 ```javascript
-    // typescript code
+    @Column({ name: 'last_login', nullable: true })
+    lastLogin: Date;
+```
+
+### Usar plurales para los arrays.
+##### BAD:
+```javascript
+    @OneToMany(type => Token, token => token.user, { cascade: true })
+    token: Token[];
+```
+
+##### GOOD:
+```javascript
+    @OneToMany(type => Token, token => token.user, { cascade: true })
+    tokens: Token[];
 ```

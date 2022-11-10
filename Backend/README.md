@@ -136,7 +136,7 @@
     @Injectable()
     export class ProfileService {
 
-  private readonly logger = new Logger(ProfileService.name); 
+    private readonly logger = new Logger(ProfileService.name); 
 ```
 
 ### Logueo con logger y NO con console.log()
